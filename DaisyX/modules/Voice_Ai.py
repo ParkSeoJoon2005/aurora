@@ -116,9 +116,7 @@ async def _(event):
                     res = get(server)
 
                     if "Wolfram Alpha did not understand" in res:
-                        answer = (
-                            "I'm sorry Hermione's AI system can't undestand your problem"
-                        )
+                        answer = "I'm sorry Hermione's AI system can't undestand your problem"
                     else:
                         answer = res.text
                     try:

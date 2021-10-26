@@ -161,9 +161,7 @@ async def help_cmd(message, strings):
 async def help_cmd_g(message, strings):
     text = strings["btn_group_help"]
     buttons = InlineKeyboardMarkup()
-    buttons.add(
-        InlineKeyboardButton(text=text, url="https://t.me/Auroraskbot?start")
-    )
+    buttons.add(InlineKeyboardButton(text=text, url="https://t.me/Auroraskbot?start"))
     buttons.add(
         InlineKeyboardButton(text="Updates", url="https://t.me/HermioneUpdates")
     )

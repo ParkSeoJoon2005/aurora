@@ -113,5 +113,5 @@ async def virusscan(event):
 __mod_name__ = "Virus Scan"
 __help__ = """
  - /scanit: Scan a file for virus (MAX SIZE = 3MB)
- - ᖘꂦꅐꏂꋪꀷ ꌃꌩ @HermioneUpdates
+ 
  """

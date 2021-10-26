@@ -57,20 +57,20 @@ async def hmm(_, message):
         lel = await edit_or_reply(message, "`Processing...`")
         lol = add_chat(int(message.chat.id))
         if not lol:
-            await lel.edit("Hermione AI Already Activated In This Chat")
+            await lel.edit("Aurora AI Already Activated In This Chat")
             return
         await lel.edit(
-            f"Hermione AI Successfully Added For Users In The Chat {message.chat.id}"
+            f"Aurora AI Successfully Added For Users In The Chat {message.chat.id}"
         )
 
     elif status == "OFF" or status == "off" or status == "Off":
         lel = await edit_or_reply(message, "`Processing...`")
         Escobar = remove_chat(int(message.chat.id))
         if not Escobar:
-            await lel.edit("Hermione AI Was Not Activated In This Chat")
+            await lel.edit("Aurora AI Was Not Activated In This Chat")
             return
         await lel.edit(
-            f"Hermione AI Successfully Deactivated For Users In The Chat {message.chat.id}"
+            f"Aurora AI Successfully Deactivated For Users In The Chat {message.chat.id}"
         )
 
     elif status == "EN" or status == "en" or status == "english":
@@ -341,16 +341,16 @@ async def inuka(client, message):
 
 __help__ = """
 <b> Chatbot </b>
-Hermione AI 3.0 IS THE ONLY AI SYSTEM WHICH CAN DETECT & REPLY UPTO 200 LANGUAGES
+Aurora AI 3.0 IS THE ONLY AI SYSTEM WHICH CAN DETECT & REPLY UPTO 200 LANGUAGES
  - /chatbot [ON/OFF]: Enables and disables AI Chat mode (EXCLUSIVE)
  - /chatbot EN : Enables English only chatbot
  
  
 <b> Assistant </b>
- - /ask [question]: Ask question from daisy
+ - /ask [question]: Ask question from Aurora
  - /ask [reply to voice note]: Get voice reply
  
-Powerd By @HermioneUpdates
+
  
 """
 

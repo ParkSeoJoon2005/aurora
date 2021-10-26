@@ -66,12 +66,12 @@ class AioHttp:
 
 __mod_name__ = "Inline"
 __help__ = """
- <b> INLINE BOT SERVICE OF @𝑴𝑰𝑺𝑺_𝑴𝑼𝑺𝑰𝑪𝒀𝑩𝑶𝑻 </b> 
+ <b> INLINE BOT SERVICE OF Aurora </b> 
  
 <i> I'm more efficient when added as group admin. By the way these commands can be used by anyone in a group via inline.</i>
 
 <b>Syntax</b>
-   @Miss_MusicyBot [command] [query]
+   @AuroraSKbot [command] [query]
 
 <b> Commands Available</b>
 - alive - Check Bot's Stats.
@@ -111,7 +111,7 @@ __help__ = """
 
 __MODULE__ = "Inline"
 __HELP__ = """
- ==>> **INLINE BOT SERVICE OF @Miss_MusicyBot** <<==
+ ==>> **INLINE BOT SERVICE OF Aurora** <<==
 `I'm more efficient when added as group admin. By the way these commands can be used by anyone in a group via inline.`
 
    >> Syntax <<
@@ -248,7 +248,7 @@ async def inline_query_handler(client, query):
                     await query.answer(
                         results=answers,
                         cache_time=0,
-                        switch_pm_text="Error: Search timed out",
+                        switch_pm_text="Error: Search timed out!",
                         switch_pm_parameter="",
                     )
 

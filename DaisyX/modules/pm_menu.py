@@ -86,7 +86,7 @@ async def get_start_func(message, strings, edit=False):
         InlineKeyboardButton(strings["btn_lang"], callback_data="lang_btn"),
         InlineKeyboardButton(
             strings["btn_source"],
-            url="https://t.me/percy_jackson_4",
+            url="https://t.me/boy_alone_in_universe",
         ),
     )
     buttons.add(
@@ -100,8 +100,8 @@ async def get_start_func(message, strings, edit=False):
     )
     buttons.add(
         InlineKeyboardButton(
-            "😍Add Hermione to your group",
-            url=f"https://telegram.me/miss_musicybot?startgroup=true",
+            "Add Aurora to your group",
+            url=f"https://telegram.me/auroraskbot?startgroup=true",
         ),
     )
 
@@ -124,7 +124,7 @@ async def help_cb(event, strings):
 @get_strings_dec("pm_menu")
 async def help_cb(event, strings):
     button = help_markup(ALL_MODULES)
-    button.add(InlineKeyboardButton(strings["back"], callback_data="get_help"))
+    button.add(InlineKeyboardButton(strings["Back"], callback_data="get_help"))
     with suppress(MessageNotModified):
         await event.message.edit_text(strings["help_header"], reply_markup=button)
 
@@ -150,7 +150,7 @@ async def back_btn(event):
 @get_strings_dec("pm_menu")
 async def help_cmd(message, strings):
     button = help_markup(MOD_HELP)
-    button.add(InlineKeyboardButton(strings["back"], callback_data="go_to_start"))
+    button.add(InlineKeyboardButton(strings["Back"], callback_data="go_to_start"))
     button.add(InlineKeyboardButton(text="Extras", callback_data="extra_menue"))
     await message.reply(strings["help_header"], reply_markup=button)
 
@@ -162,10 +162,10 @@ async def help_cmd_g(message, strings):
     text = strings["btn_group_help"]
     buttons = InlineKeyboardMarkup()
     buttons.add(
-        InlineKeyboardButton(text=text, url="https://t.me/miss_musicybot?start")
+        InlineKeyboardButton(text=text, url="https://t.me/Auroraskbot?start")
     )
     buttons.add(
-        InlineKeyboardButton(text="updates", url="https://t.me/HermioneUpdates")
+        InlineKeyboardButton(text="Updates", url="https://t.me/HermioneUpdates")
     )
     await message.reply(strings["help_header"], reply_markup=buttons)
 
@@ -179,7 +179,7 @@ async def helpmenu_callback(query, callback_data=None, **kwargs):
     msg = f"Help for <b>{mod}</b> module:\n"
     msg += f"{MOD_HELP[mod]}"
     button = InlineKeyboardMarkup().add(
-        InlineKeyboardButton(text="🏃‍♂️ Back", callback_data="get_help")
+        InlineKeyboardButton(text="Back", callback_data="get_help")
     )
     with suppress(MessageNotModified):
         await query.message.edit_text(
@@ -197,7 +197,7 @@ async def helpmenu_callback(query, callback_data=None, **kwargs):
     msg = f"Help for <b>{mod}</b> module:\n"
     msg += f"{MOD_EXTRA[mod]}"
     button = InlineKeyboardMarkup().add(
-        InlineKeyboardButton(text="🏃‍♂️ Back", callback_data="get_help")
+        InlineKeyboardButton(text="Back", callback_data="get_help")
     )
     with suppress(MessageNotModified):
         await query.message.edit_text(

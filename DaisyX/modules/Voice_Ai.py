@@ -75,9 +75,7 @@ async def _(event):
         server = f"https://api.wolframalpha.com/v1/spoken?appid={appid}&i={i}"
         res = get(server)
         if "Wolfram Alpha did not understand" in res.text:
-            await event.reply(
-                "Sorry, My AI systems could't recognized your question.."
-            )
+            await event.reply("Sorry, My AI systems could't recognized your question..")
             return
         await event.reply(f"**{i}**\n\n" + res.text, parse_mode="markdown")
 

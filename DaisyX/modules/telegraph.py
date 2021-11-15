@@ -46,14 +46,14 @@ async def _(event):
                 ms_two = (end - start).seconds
                 os.remove(downloaded_file_name)
                 await h.edit(
-                    "Uploaded to https://telegra.ph{} in {} seconds.𝑷𝒐𝒘𝒆𝒓𝒅 𝒃𝒚 @HermioneUpdates".format(
+                    "Uploaded to https://telegra.ph{} in {} seconds...!".format(
                         media_urls[0], (ms + ms_two)
                     ),
                     link_preview=True,
                 )
         elif input_str == "t":
             user_object = await tbot.get_entity(r_message.sender_id)
-            title_of_page = user_object.first_name  # + " " + user_object.last_name
+            title_of_page = user_object.first_name  # + " " + .last_name
             # apparently, all Users do not have last_name field
             if optional_title:
                 title_of_page = optional_title
@@ -75,7 +75,7 @@ async def _(event):
             end = datetime.now()
             ms = (end - start).seconds
             await event.reply(
-                "Pasted to https://telegra.ph/{} in {} seconds.𝑷𝒐𝒘𝒆𝒓𝒆𝒅 𝒃𝒚 @HermioneUpdates".format(
+                "Pasted to https://telegra.ph/{} in {} seconds...!".format(
                     response["path"], ms
                 ),
                 link_preview=True,
@@ -96,7 +96,7 @@ file_helpo = file_help.replace("_", " ")
 __help__ = """
  - /tm : Get Telegraph Link Of Replied Media
  - /tt: Get Telegraph Link of Replied Text
- - 𝑷𝒐𝒘𝒆𝒓𝒅 𝑩𝒚 @HermioneUpdates
+ 
 """
 
 __mod_name__ = "Telegraph"
